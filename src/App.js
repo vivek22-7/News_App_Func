@@ -22,6 +22,7 @@ export default class App extends Component {
           <Route exact path='/sports' element={<News key="sports" pageSize={this.pageSize} country="in" category="sports"/>}></Route>
           <Route exact path='/technology' element={<News key="technology" pageSize={this.pageSize} country="in" category="technology"/>}></Route>
       </Routes>
+      <i className="fa-solid fa-magnifying-glass"></i>
       </>
     )
   }
