@@ -6,6 +6,8 @@ import NavBar from './components/NavBar';
 import News from './components/News';
 import {Routes , Route } from 'react-router-dom';
 import LoadingBar from 'react-top-loading-bar'
+import ScrollToTop from "react-scroll-to-top";
+import {ReactComponent as UpArrow} from './components/up_arrow.svg'
 
 export default class App extends Component {
   countryCode = "in"
@@ -27,6 +29,7 @@ export default class App extends Component {
         progress={this.state.progress}
         
       />
+      <ScrollToTop smooth component={<UpArrow/>}/>
       <Routes> 
           <Route exact path='/' element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="general" pageSize={this.pageSize} country={this.countryCode} category="general"/>}></Route>
           <Route exact path='/business' element={<News setProgress={this.setProgress} apiKey={this.apiKey} key="business" pageSize={this.pageSize} country={this.countryCode} category="business"/>}></Route>
